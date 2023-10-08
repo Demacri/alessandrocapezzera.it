@@ -9,9 +9,14 @@
 # General
 --------------------------------------------------------------*/
 @import "~@material/chips/styles";
-
+@import "~aos/dist/aos.css";
+@import "~bootstrap/dist/css/bootstrap.min.css";
+@import "~bootstrap-icons/font/bootstrap-icons.css";
+@import "~boxicons/css/boxicons.min.css";
+@import "~glightbox/dist/css/glightbox.min.css";
+@import "~swiper/swiper-bundle.min.css";
+@import "~highlight.js/scss/vs2015.scss";
 body {
-    /*font-family: "Open Sans", sans-serif;*/
     font-family: 'Montserrat', sans-serif;
     color: #272829;
   }
@@ -301,7 +306,7 @@ body {
     font-family: "Poppins", sans-serif;
   }
 
-  #hero p span {
+  #hero .typed {
     color: #0563bb;
     letter-spacing: 1px;
   }
@@ -1230,3 +1235,20 @@ body {
       display: block;
   }
 
+#about .content {
+    text-align: justify;
+}
+
+#hero::before {
+    background: transparent;
+}
+#navbar.navbar-transparent a:not(.active) {
+    color: #f2f3f5;
+    background: #282828;
+}
+.social-links {
+    transition: all 0.3s ease-in-out;
+}
+#hero .social-links a {
+    color: #f2f3f5;
+}

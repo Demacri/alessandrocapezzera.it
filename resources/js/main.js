@@ -1,12 +1,21 @@
+import AOS from 'aos';
+import GLightbox from 'glightbox';
+import Swiper from 'swiper';
+import Isotope from 'isotope-layout';
+import Typed from 'typed.js';
+import 'waypoints/lib/noframework.waypoints.min.js';
+import hljs from 'highlight.js/lib/core';
+import xml from 'highlight.js/lib/languages/xml';
+hljs.registerLanguage('xml', xml);
 /**
 * Template Name: MyResume - v4.3.0
 * Template URL: https://bootstrapmade.com/free-html-bootstrap-template-my-resume/
 * Author: BootstrapMade.com
 * License: https://bootstrapmade.com/license/
 */
-(function() {
+(function () {
   "use strict";
-
+  hljs.highlightAll();
   /**
    * Easy selector helper function
    */
@@ -34,7 +43,7 @@
   }
 
   /**
-   * Easy on scroll event listener 
+   * Easy on scroll event listener
    */
   const onscroll = (el, listener) => {
     el.addEventListener('scroll', listener)
@@ -56,6 +65,11 @@
         navbarlink.classList.remove('active')
       }
     })
+    if(navbarlinks[0].classList.contains('active')){
+      select('#navbar').classList.add('navbar-transparent');
+    } else {
+      select('#navbar').classList.remove('navbar-transparent');
+    }
   }
   window.addEventListener('load', navbarlinksActive)
   onscroll(document, navbarlinksActive)
@@ -90,7 +104,7 @@
   /**
    * Mobile nav toggle
    */
-  on('click', '.mobile-nav-toggle', function(e) {
+  on('click', '.mobile-nav-toggle', function (e) {
     select('body').classList.toggle('mobile-nav-active')
     this.classList.toggle('bi-list')
     this.classList.toggle('bi-x')
@@ -99,7 +113,7 @@
   /**
    * Scrool with ofset on links with a class name .scrollto
    */
-  on('click', '.scrollto', function(e) {
+  on('click', '.scrollto', function (e) {
     if (select(this.hash)) {
       e.preventDefault()
 
@@ -135,20 +149,65 @@
     });
   }
 
-  /**
-   * Hero type effect
-   */
-  const typed = select('.typed')
-  if (typed) {
-    let typed_strings = typed.getAttribute('data-typed-items')
-    typed_strings = typed_strings.split(',')
-    new Typed('.typed', {
-      strings: typed_strings,
-      loop: true,
-      typeSpeed: 50,
+    // /**
+    //  * Hero type effect
+    //  */
+    // const typed = select('.typed')
+    // if (typed) {
+    //   let typed_strings = typed.innerHTML;
+    //   typed_strings = typed_strings.split(',')
+    //   typed.innerHTML = '';
+    //   new Typed('.typed', {
+    //     strings: typed_strings,
+    //     loop: true,
+    //     typeSpeed: 50,
+    //     backSpeed: 40,
+    //     backDelay: 2000
+    //   });
+    // }
+  const codeTyped = select('code');
+  if (codeTyped) {
+    let typed_strings = codeTyped.innerHTML;
+    codeTyped.innerHTML = '';
+    new Typed('code', {
+      strings: [typed_strings],
+      loop: false,
+      typeSpeed: 10,
       backSpeed: 40,
       backDelay: 2000
     });
+  }
+
+  const titleTyped = document.querySelector('#hero-h1');
+  if(titleTyped){
+    const typed_strings = titleTyped.innerHTML;
+    titleTyped.innerHTML = '';
+    new Typed('#hero-h1', {
+      strings: [typed_strings],
+      loop: false,
+      typeSpeed: 10,
+      startDelay: 2440
+    });
+  }
+  const pTyped = document.querySelector('#hero-p');
+  if(pTyped){
+    const typed_strings = pTyped.innerHTML.split(",");
+    pTyped.innerHTML = '';
+    const pTypedInstance = new Typed('#hero-p', {
+      strings: typed_strings,
+      loop: true,
+      typeSpeed: 10,
+      backSpeed: 40,
+      backDelay: 2000,
+      startDelay: 3450
+    });
+    setTimeout(() => {
+      pTypedInstance.startDelay = 0;
+      pTypedInstance.typeSpeed = 50;
+    }, 4200);
+    setTimeout(() => {
+      document.querySelector('.social-links').style.opacity = '1';
+    },5000);
   }
 
   /**
@@ -159,7 +218,7 @@
     new Waypoint({
       element: skilsContent,
       offset: '80%',
-      handler: function(direction) {
+      handler: function (direction) {
         let progress = select('.progress .progress-bar', true);
         progress.forEach((el) => {
           el.style.width = el.getAttribute('aria-valuenow') + '%'
@@ -180,9 +239,9 @@
 
       let portfolioFilters = select('#portfolio-flters li', true);
 
-      on('click', '#portfolio-flters li', function(e) {
+      on('click', '#portfolio-flters li', function (e) {
         e.preventDefault();
-        portfolioFilters.forEach(function(el) {
+        portfolioFilters.forEach(function (el) {
           el.classList.remove('filter-active');
         });
         this.classList.add('filter-active');
@@ -190,7 +249,7 @@
         portfolioIsotope.arrange({
           filter: this.getAttribute('data-filter')
         });
-        portfolioIsotope.on('arrangeComplete', function() {
+        portfolioIsotope.on('arrangeComplete', function () {
           AOS.refresh()
         });
       }, true);
@@ -199,14 +258,14 @@
   });
 
   /**
-   * Initiate portfolio lightbox 
+   * Initiate portfolio lightbox
    */
   const portfolioLightbox = GLightbox({
     selector: '.portfolio-lightbox'
   });
 
   /**
-   * Initiate portfolio details lightbox 
+   * Initiate portfolio details lightbox
    */
   const portfolioDetailsLightbox = GLightbox({
     selector: '.portfolio-details-lightbox',
