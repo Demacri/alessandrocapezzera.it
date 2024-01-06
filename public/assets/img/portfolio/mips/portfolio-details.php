@@ -31,7 +31,6 @@
             <div class="portfolio-info">
               <h3>Informazioni progetto</h3>
               <ul>
-                <li><strong>Categoria</strong>: Architettura degli elaboratori</li>
                 <li><strong>Presso</strong>: Università degli studi di Milano</li>
                 <li><strong>Data Progetto</strong>: Giugno 2019</li>
                 <li><strong>Specifica</strong>: <a href="assets/img/portfolio/mips/specifica.pdf">Visualizza</a></li>
