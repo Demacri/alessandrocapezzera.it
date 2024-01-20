@@ -40,7 +40,7 @@
         <a href="https://www.linkedin.com/in/alessandro-capezzera/" class="linkedin" aria-label="{{ __('Linkedin') }}"><i
             class="bx bxl-linkedin"></i></a>
         <?php
-        $locale = session('locale');
+        $locale = session('locale', 'en');
         $flags = [
             'it' => 'it',
             'en' => 'gb',

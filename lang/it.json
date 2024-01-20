@@ -65,5 +65,29 @@
     "Report":"Relazione",
     "Logisim Circuit": "Circuito Logisim",
     "MIPS.Description":"Il progetto consiste nella realizzazione di un’architettura RISC a 32bit, prendendo spunto dall’architettura MIPS, con ISA ridotto e un’ALU ad elaborazione di numeri interi. Le istruzioni vengono inserite nell’Istruction Register tramite l’editor di logisim. Una volta attivato il clock, le istruzioni vengono eseguite in cascata fino all’ultima disponibile nell’IR. Al fine di dimostrare il funzionamento viene caricato un programma che inserisce 6 elementi in memoria centrale, da 4 byte ciascuno sotto forma di array, un elemento k nel registro $a1, scansiona l’array e inserisce nel registro $v0: 1 se è stato trovato l’elemento k, 0 altrimenti.",
-    "StreetGorilla.Description":"Una soluzione web dinamica che combina una robusta piattaforma e-commerce Prestashop con, a quel tempo, un'applicazione innovativa per la gestione del coaching (usando Laravel + Voyager). Questo progetto include anche un'app cliente multipiattaforma (sviluppata con Ionic), la digitalizzazione dei processi aziendali inclusa un'estensione Chrome personalizzata per semplificare le operazioni di e-commerce, e supporto tecnico dedicato, racchiudendo un ampio spettro di servizi digitali di commercio e coaching. Gran parte del sito relativo all'attività di palestra è personalizzabile dai proprietari tramite un CMS."
+    "StreetGorilla.Description":"Una soluzione web dinamica che combina una robusta piattaforma e-commerce Prestashop con, a quel tempo, un'applicazione innovativa per la gestione del coaching (usando Laravel + Voyager). Questo progetto include anche un'app cliente multipiattaforma (sviluppata con Ionic), la digitalizzazione dei processi aziendali inclusa un'estensione Chrome personalizzata per semplificare le operazioni di e-commerce, e supporto tecnico dedicato, racchiudendo un ampio spettro di servizi digitali di commercio e coaching. Gran parte del sito relativo all'attività di palestra è personalizzabile dai proprietari tramite un CMS.",
+
+    "Coreve.ProjectTitle": "Progetto Digitalizzazione Bandi per CoReVe",
+    "Coreve.ProjectDetails": "Dettagli del Progetto",
+    "Coreve.Date": "Data",
+    "Coreve.ProjectDuration": "Durata del Progetto",
+    "Coreve.TechnologiesUsed": "Tecnologie Utilizzate",
+    "Coreve.Team": "Team",
+    "Coreve.MyRole": "Mio Ruolo",
+    "Coreve.ProjectDescription": "Descrizione del Progetto",
+    "Coreve.ProjectDescriptionText": "In questo progetto innovativo, il nostro obiettivo era trasformare i processi tradizionalmente cartacei di CoReVe in un sistema digitale efficiente e intuitivo che semplificasse la procedura di iscrizione ai bandi pubblicati da quest'ultima. Siamo stati incaricati di sviluppare un sistema per la creazione di bandi digitali, destinato a comuni, enti e società. La sfida principale era digitalizzare i moduli cartacei esistenti in form dinamiche, semplificando il processo di compilazione e riducendo significativamente gli errori formali attraverso funzioni di validazione automatica.",
+    "Coreve.FeaturesAndResults": "Caratteristiche e risultati",
+    "Coreve.Digitalization": "Digitalizzazione",
+    "Coreve.DigitalizationText": "Creazione di form dinamiche che guidano l'utente in un processo di compilazione intuitivo e intelligente, minimizzando errori grazie alla validazione automatica del sistema.",
+    "Coreve.SecurityAndLegality": "Sicurezza e Legalità",
+    "Coreve.SecurityAndLegalityText": "Implementazione di un sistema per la generazione di documenti PDF al termine della procedura di compilazione, che possono essere firmati digitalmente o stampati per una firma manuale, garantendo la validità legale delle sottomissioni.",
+    "Coreve.TechnologicalInnovation": "Innovazione Tecnologica",
+    "Coreve.TechnologicalInnovationText": "Utilizzo di tecnologie avanzate come NodeJS con Strapi per il backend, e Angular con PrimeNG per un frontend personalizzato, oltre all'implementazione di OIDC Authentication con Keycloak.",
+    "Coreve.MyContribution": "Il mio Contributo",
+    "Coreve.MyContributionText": "Come parte integrante del team, il mio ruolo si è concentrato sulla stesura dell'architettura di base e sulla revisione del codice. Ho rapidamente acquisito competenze sui nuovi framework utilizzati, fornendo una guida tecnica essenziale al team e garantendo l'adempimento degli obiettivi di progetto in tempi ristretti. In aggiunta, dato il mio ruolo aziendale, ho supportato altri sviluppatori e partecipato a riunioni per progetti paralleli, dimostrando versatilità e competenza multi-progetto.",
+    "Coreve.PriorityManagement": "Gestione delle Priorità e Ottimizzazione dei Tempi",
+    "Coreve.PriorityManagementText": "Un aspetto cruciale di questo progetto è stata la gestione efficace delle tempistiche. Dato che il bando era un documento ufficiale legalmente vincolante, con una data e ora di pubblicazione fissate, abbiamo dovuto adottare un approccio strategico nella gestione delle attività. Per ottimizzare i tempi, abbiamo deciso di posticipare tutte le operazioni di backoffice che non erano immediatamente necessarie per la pubblicazione del bando. Questo ci ha permesso di concentrarci sulla priorità assoluta: lo sviluppo della parte di frontoffice accessibile da comuni, enti e società. Questa decisione ha garantito che potessimo rispettare la scadenza stringente senza compromettere la qualità e la funzionalità del sistema, dimostrando la nostra capacità di adattarci efficacemente alle esigenze del cliente e alle restrizioni temporali.",
+    "Coreve.TechMentor": "Mentore Tecnico",
+    "weeks":"settimane"
+
 }
