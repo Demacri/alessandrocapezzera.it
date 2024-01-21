@@ -559,6 +559,10 @@
               <div class="form-group mt-3">
                 <textarea class="form-control" name="message" rows="5" placeholder="{{ __('Message') }}" required></textarea>
               </div>
+              <div class="form-group mt-3">
+                <div class="g-recaptcha d-flex justify-content-center" data-sitekey="{{ env('RECAPTCHA_SITE_KEY') }}">
+                </div>
+              </div>
               <div class="my-3">
                 <div class="loading">{{ __('Loading') }}</div>
                 <div class="error-message">{{ __('Contact.Error') }}</div>

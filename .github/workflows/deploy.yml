@@ -45,6 +45,8 @@ jobs:
         echo MAIL_TO_CONTACT_ADDRESS=${{ secrets.MAIL_TO_CONTACT_ADDRESS }} >> .env
         echo MAIL_USERNAME=${{ secrets.MAIL_USERNAME }} >> .env
         echo MAIL_PASSWORD=${{ secrets.MAIL_PASSWORD }} >> .env
+        echo RECAPTCHA_SITE_KEY=${{ secrets.RECAPTCHA_SITE_KEY }} >> .env
+        echo RECAPTCHA_SECRET_KEY=${{ secrets.RECAPTCHA_SECRET_KEY }} >> .env
 
     - name: Deploy via FTP
       uses: SamKirkland/FTP-Deploy-Action@4.0.0

@@ -281,18 +281,17 @@ import Typed from 'typed.js';
         xhr.setRequestHeader('X-Requested-With', 'XMLHttpRequest');
 
         xhr.onload = function () {
-            if (xhr.status >= 200 && xhr.status < 400) {
+            var response = JSON.parse(xhr.responseText);
+            if (xhr.status >= 200 && xhr.status < 400 && response.success) {
                 // Success!
-                var response = JSON.parse(xhr.responseText);
                 document.querySelector('.sent-message').style.display = 'block';
                 document.querySelector('.sent-message').textContent = response.message;
                 document.querySelector('.error-message').style.display = 'none';
                 contactForm.reset();
             } else {
                 // We reached our target server, but it returned an error
-                var errorResponse = JSON.parse(xhr.responseText);
                 document.querySelector('.error-message').style.display = 'block';
-                document.querySelector('.error-message').textContent = errorResponse.message;
+                document.querySelector('.error-message').textContent = response.message;
                 document.querySelector('.sent-message').style.display = 'none';
             }
             setTimeout(() => {

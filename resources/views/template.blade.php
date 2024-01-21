@@ -32,6 +32,10 @@
 <body>
 
   @yield('body')
+  <script src="https://www.google.com/recaptcha/api.js"></script>
+  <script>
+    const RECAPTCHA_SITE_KEY = '{{ env('RECAPTCHA_SITE_KEY') }}';
+  </script>
   @vite(['resources/js/app.js'])
 
 </body>
