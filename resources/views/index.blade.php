@@ -32,7 +32,7 @@
 
       </div>
       <div class="social-links">
-        <a href="mailto:alessandro.capezzera99@gmail.com" class="gmail" aria-label="{{ __('Gmail') }}"><i
+        <a href="mailto:info@alessandrocapezzera.it" class="gmail" aria-label="{{ __('Gmail') }}"><i
             class="bx bxl-gmail"></i></a>
         <a href="https://github.com/Demacri" class="github" aria-label="{{ __('Github') }}"><i
             class="bx bxl-github"></i></a>
@@ -594,9 +594,6 @@
   <div id="preloader"></div>
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
       class="bi bi-arrow-up-short"></i></a>
-
-  <!-- Vendor JS Files -->
-  <script src={{ asset('assets/vendor/php-email-form/validate.js') }}></script>
 
   <!-- Template Main JS File -->
   @include('projects.coreve')

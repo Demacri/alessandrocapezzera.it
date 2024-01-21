@@ -66,7 +66,8 @@
     "Logisim Circuit": "Logisim Circuit",
     "MIPS.Description":"The project involves creating a 32-bit RISC architecture, inspired by the MIPS architecture, featuring a reduced instruction set architecture (ISA) and an ALU for integer number processing. Instructions are entered into the Instruction Register through Logisim's editor. Upon activating the clock, the instructions are executed sequentially until the last one in the IR. To demonstrate functionality, a program is loaded that inserts 6 elements into the main memory, each 4 bytes in the form of an array. It places an element k in register $a1, scans the array, and sets register $v0 to 1 if the element k is found, 0 otherwise.",
     "StreetGorilla.Description":"A dynamic web solution combining a robust Prestashop e-commerce platform with, at that time, an innovative coaching management application (using Laravel + Voyager). This project also features a cross-platform customer app (built with Ionic), Automation including a custom Chrome extension for streamlined e-commerce operations, and dedicated tech support, encapsulating a full spectrum of digital commerce and coaching services. Pretty most of the site regarding the gym business is customizable by the owners through a cms.",
-
+    "Message sent successfully!": "Message sent successfully!",
+    "Error sending message, please try again later.": "Error sending message, please try again later.",
     "Back to projects": "Back to projects",
     "weeks":"weeks",
 
@@ -143,7 +144,7 @@
     "ZerounoOptimization.KISSPattern": "Generalization and Many Kisses (KISS Pattern)",
     "ZerounoOptimization.KISSDescription": "The secret and mantra I like to say I brought into zerouno is 'Simplify and eliminate'. The truth and the real difference in compilation times, maintainability, etc., lies in greatly simplifying an overengineered source structure, eliminating dozens and dozens of files and thousands of lines of code. Of course, this should not be done randomly but requires careful consideration of any potential breaking changes, levels of abstraction to be maintained, and all this, if you're (un)lucky like me, without any line of testing to check that what you are doing does not break scattered logics throughout the application.",
     "ZerounoOptimization.ParetoPrinciple": "So, after eliminating here and there, making refactor upon refactor of methods, classes, etc., having an almost perfect understanding of all the gears that move the application, and with the boss's blessing, you can proceed to gather an idea of how to apply the Pareto principle to your own application context, seeking to achieve 80% of the existing functionality with 20% of the effort.",
-    "ZerounoOptimization.CommentsWelcome": "Comments are welcome:"
+    "ZerounoOptimization.CommentsWelcome": "Comments are welcome:",
 
-
+    "Loading": "Loading..."
 }

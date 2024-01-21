@@ -66,7 +66,8 @@
     "Logisim Circuit": "Circuito Logisim",
     "MIPS.Description":"Il progetto consiste nella realizzazione di un’architettura RISC a 32bit, prendendo spunto dall’architettura MIPS, con ISA ridotto e un’ALU ad elaborazione di numeri interi. Le istruzioni vengono inserite nell’Istruction Register tramite l’editor di logisim. Una volta attivato il clock, le istruzioni vengono eseguite in cascata fino all’ultima disponibile nell’IR. Al fine di dimostrare il funzionamento viene caricato un programma che inserisce 6 elementi in memoria centrale, da 4 byte ciascuno sotto forma di array, un elemento k nel registro $a1, scansiona l’array e inserisce nel registro $v0: 1 se è stato trovato l’elemento k, 0 altrimenti.",
     "StreetGorilla.Description":"Una soluzione web dinamica che combina una robusta piattaforma e-commerce Prestashop con, a quel tempo, un'applicazione innovativa per la gestione del coaching (usando Laravel + Voyager). Questo progetto include anche un'app cliente multipiattaforma (sviluppata con Ionic), la digitalizzazione dei processi aziendali inclusa un'estensione Chrome personalizzata per semplificare le operazioni di e-commerce, e supporto tecnico dedicato, racchiudendo un ampio spettro di servizi digitali di commercio e coaching. Gran parte del sito relativo all'attività di palestra è personalizzabile dai proprietari tramite un CMS.",
-
+    "Message sent successfully!": "Messaggio inviato con successo!",
+    "Error sending message, please try again later.": "Errore nell'invio del messaggio, per favore riprova più tardi.",
     "Back to projects": "Torna ai progetti",
     "weeks":"settimane",
 
@@ -144,6 +145,8 @@
     "ZerounoOptimization.KISSPattern": "Generalizzazione e Tanti Baci (KISS Pattern)",
     "ZerounoOptimization.KISSDescription": "Il segreto e mantra che mi piace dire di aver portato all'interno di zerouno è 'Semplifica ed elimina'. La verità e la vera differenza nei tempi di compilazione, di manutenibilità ecc. ecc. sta nel semplificare estremamente una struttura overingegnerizzata del sorgente, eliminando decine e decine di file e migliaia di righe di codice. Ovviamente non va fatto a caso ma vanno ragionati tutti gli eventuali breaking changes che si portano, livelli di astrazioni che si vogliono mantenere e tutto ciò, se sei (s)fortunato come me, senza alcuna riga di test per avere un riscontro che quello che si sta facendo non rompa logiche sparse per l'applicazione.",
     "ZerounoOptimization.ParetoPrinciple": "Quindi, dopo aver eliminato qua e là, aver effettuato refactor su refactor di metodi, classi ecc., avere un'idea quasi perfetta di tutti gli ingranaggi che muovono l'applicazione e con la benedizione del capo puoi procedere a raccogliere un'idea di come applicare il principio di pareto al proprio contesto applicativo cercando di ottenere l'80% delle funzionalità esistenti con il 20% dell'effort.",
-    "ZerounoOptimization.CommentsWelcome": "Commenti sono ben accetti:"
+    "ZerounoOptimization.CommentsWelcome": "Commenti sono ben accetti:",
+
+    "Loading": "Caricamento..."
 
 }

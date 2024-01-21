@@ -65,7 +65,7 @@
         <p>{{ __('ZerounoOptimization.ParetoPrinciple') }}</p>
 
         <p>{{ __('ZerounoOptimization.CommentsWelcome') }} <a
-            href="mailto:alessandro.capezzera99@gmail.com">alessandro.capezzera99@gmail.com</a></p>
+            href="mailto:info@alessandrocapezzera.it">info@alessandrocapezzera.it</a></p>
       </div>
     </div>
   </div>

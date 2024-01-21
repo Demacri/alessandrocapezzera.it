@@ -273,7 +273,7 @@ import Typed from 'typed.js';
     const contactForm = document.querySelector('.php-email-form');
     contactForm.addEventListener('submit', function (e) {
         e.preventDefault();
-        contactForm.querySelector('.loading').classList.remove('d-block');
+        contactForm.querySelector('.loading').classList.add('d-block');
 
         var xhr = new XMLHttpRequest();
         xhr.open('POST', this.getAttribute('action'), true);
@@ -295,6 +295,10 @@ import Typed from 'typed.js';
                 document.querySelector('.error-message').textContent = errorResponse.message;
                 document.querySelector('.sent-message').style.display = 'none';
             }
+            setTimeout(() => {
+                document.querySelector('.error-message').style.display = 'none';
+                document.querySelector('.sent-message').style.display = 'none';
+            }, 5000);
             contactForm.querySelector('.loading').classList.remove('d-block');
         };
 
@@ -302,6 +306,10 @@ import Typed from 'typed.js';
             // There was a connection error of some sort
             document.querySelector('.error-message').style.display = 'block';
             document.querySelector('.error-message').textContent = 'There was an error submitting the form. Please try again.';
+            setTimeout(() => {
+                document.querySelector('.error-message').style.display = 'none';
+                document.querySelector('.sent-message').style.display = 'none';
+            }, 5000);
             contactForm.querySelector('.loading').classList.remove('d-block');
         };
 
