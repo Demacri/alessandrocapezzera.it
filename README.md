@@ -9,3 +9,7 @@ npm run build
 ```bash
 php artisan serve
 ```
+
+
+### Deployment
+Just push to main, github actions will do the rest.

@@ -14,13 +14,15 @@ use App\Http\Controllers\ContactController;
 |
 */
 
-Route::get('/', function () {
-    return view('index');
+Route::group(['middleware' => 'locale'], function () {
+    Route::get('/', function () {
+        return view('index');
+    });
+    Route::get('/blog/{slug}', function ($slug) {
+        return view('blog.' . $slug);
+    })->name('blog');
+    Route::get('/{lang}/{route?}', function ($lang, $route = '') {
+        return redirect('/' . $route);
+    })->whereIn('lang', config('app.locales'))->where('route', '.*');
+    Route::post('/send-message', [ContactController::class, 'send'])->name('contact.send');
 });
-Route::get('/blog/{slug}', function ($slug) {
-    return view('blog.' . $slug);
-})->name('blog');
-Route::get('/{lang}/{route?}', function ($lang, $route = '') {
-    return redirect('/' . $route);
-})->whereIn('lang', config('app.locales'))->where('route', '.*')->middleware('locale');
-Route::post('/send-message', [ContactController::class, 'send'])->name('contact.send');

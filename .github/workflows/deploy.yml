@@ -1,0 +1,56 @@
+name: Deploy su Aruba
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Setup PHP and Composer
+      uses: shivammathur/setup-php@v2
+      with:
+        php-version: '8.3'
+        tools: composer
+
+    - name: Installa dipendenze PHP
+      run: composer install --no-progress --prefer-dist
+
+    - name: Setup Node.js
+      uses: actions/setup-node@v2
+      with:
+        node-version: '18'
+
+    - name: Esegui npm run ci
+      run: npm ci
+
+    - name: Esegui npm run build
+      run: npm run build
+
+    - name: Crea file .env
+      run: |
+        echo 'APP_NAME=alessandrocapezzera.it' >> .env
+        echo 'APP_ENV=production' >> .env
+        echo APP_KEY=${{ secrets.APP_KEY }} >> .env
+        echo APP_DEBUG=false >> .env
+        echo MAIL_MAILER=smtp >> .env
+        echo MAIL_HOST=smtp-relay.brevo.com >> .env
+        echo MAIL_PORT=587 >> .env
+        echo MAIL_FROM_ADDRESS=$MAIL_FROM_ADDRESS >> .env
+        echo MAIL_FROM_NAME=$MAIL_FROM_NAME >> .env
+        echo MAIL_USERNAME=${{ secrets.MAIL_USERNAME }} >> .env
+        echo MAIL_PASSWORD=${{ secrets.MAIL_PASSWORD }} >> .env
+
+    - name: Deploy via FTP
+      uses: SamKirkland/FTP-Deploy-Action@4.0.0
+      with:
+        server: ftp.alessandrocapezzera.it
+        username: ${{ secrets.FTP_USERNAME }}
+        password: ${{ secrets.FTP_PASSWORD }}
+        local-dir: ./
+        server-dir: ./www.alessandrocapezzera.it/
+        security: loose
