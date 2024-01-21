@@ -12,7 +12,8 @@
         </li>
         <li><a href="#resume" class="nav-link scrollto"><i class="bx bx-file-blank"></i>
             <span>{{ __('Resume') }}</span></a></li>
-        <li><a href="#portfolio" class="nav-link scrollto"><i class="bx bx-book-content"></i> <span>Portfolio</span></a>
+        <li><a href="#portfolio" class="nav-link scrollto"><i class="bx bx-book-content"></i>
+            <span>{{ __('Projects') }}</span></a>
         </li>
         <li><a href="#services" class="nav-link scrollto"><i class="bx bx-server"></i>
             <span>{{ __('Services') }}</span></a></li>

@@ -207,6 +207,8 @@ import Typed from 'typed.js';
             disableOnInteraction: false
         },
     }
+
+
     /**
      * Initiate portfolio details lightbox
      */
@@ -214,10 +216,16 @@ import Typed from 'typed.js';
         selector: '.portfolio-details-lightbox',
         skin: 'portfolio'
     });
+    function closeActiveSlideBox() {
+        portfolioDetailsLightbox.close();
+    }
+    document.addEventListener('click', function (event) { // btn-back is recreated for each slide so we need to use event delegation
+        if (event.target.matches('.portfolio-btn-back') || event.target.closest('.portfolio-btn-back')) {
+            closeActiveSlideBox();
+        }
+    });
+
     portfolioDetailsLightbox.on('open', () => {
-        document.querySelectorAll('.portfolio-btn-back').forEach(el => el.addEventListener('click', () => {
-            portfolioDetailsLightbox.close();
-        })); // portfolio btn back is recreated each time the lightbox is opened, so we need to rebind the event
         /**
          * Portfolio slider
          */
