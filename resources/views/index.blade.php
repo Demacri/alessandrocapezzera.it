@@ -526,7 +526,7 @@
               <div class="email">
                 <i class="bi bi-envelope"></i>
                 <h4>Email:</h4>
-                <p>{{ env('MAIL_FROM_ADDRESS') }}</p>
+                <p>info@alessandrocapezzera.it</p>
               </div>
 
               {{-- <div class="phone">
