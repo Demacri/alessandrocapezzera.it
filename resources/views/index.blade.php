@@ -1,4 +1,5 @@
 @extends('template')
+@section('body-class', 'hero-dark')
 @section('body')
   <!-- ======= Mobile nav toggle button ======= -->
   <i class="bi bi-list mobile-nav-toggle d-xl-none"></i>
@@ -8,13 +9,13 @@
     <nav id="navbar" class="navbar nav-menu">
       <ul>
         <li><a href="#hero" class="nav-link scrollto active"><i class="bx bx-home"></i> <span>Home</span></a></li>
+        <li><a href="#portfolio" class="nav-link scrollto"><i class="bx bx-book-content"></i>
+            <span>{{ __('Projects') }}</span></a>
+        </li>
         <li><a href="#about" class="nav-link scrollto"><i class="bx bx-user"></i> <span>{{ __('About') }}</span></a>
         </li>
         <li><a href="#resume" class="nav-link scrollto"><i class="bx bx-file-blank"></i>
             <span>{{ __('Resume') }}</span></a></li>
-        <li><a href="#portfolio" class="nav-link scrollto"><i class="bx bx-book-content"></i>
-            <span>{{ __('Projects') }}</span></a>
-        </li>
         <li><a href="#services" class="nav-link scrollto"><i class="bx bx-server"></i>
             <span>{{ __('Services') }}</span></a></li>
         <li><a href="#contact" class="nav-link scrollto"><i class="bx bx-envelope"></i>
@@ -598,7 +599,7 @@
   <div id="preloader"></div>
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
       class="bi bi-arrow-up-short"></i></a>
-
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
   <!-- Template Main JS File -->
   @include('projects.coreve')
   @include('projects.jpuzzle')

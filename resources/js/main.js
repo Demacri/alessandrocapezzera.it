@@ -8,6 +8,7 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import Isotope from 'isotope-layout';
 import Typed from 'typed.js';
+import NET from 'vanta/dist/vanta.net.min';
 /**
 * Template Name: MyResume - v4.3.0
 * Template URL: https://bootstrapmade.com/free-html-bootstrap-template-my-resume/
@@ -16,7 +17,22 @@ import Typed from 'typed.js';
 */
 (function () {
     "use strict";
-
+    NET({
+        el: "#hero",
+        mouseControls: true,
+        touchControls: true,
+        gyroControls: false,
+        minHeight: 200.00,
+        minWidth: 200.00,
+        scale: 1.00,
+        scaleMobile: 1.00,
+        color: 0x5daef7,
+        backgroundColor: 0x222222,
+        points: 10.00,
+        maxDistance: 20.00,
+        spacing: 15.00,
+        showDots: true
+    })
     /**
      * Easy selector helper function
      */
@@ -58,11 +74,11 @@ import Typed from 'typed.js';
             }
         })
         // activate dark theme for menu
-        //   if(navbarlinks[0].classList.contains('active')){
-        //     select('#navbar').classList.add('navbar-transparent');
-        //   } else {
-        //     select('#navbar').classList.remove('navbar-transparent');
-        //   }
+        if (navbarlinks[0].classList.contains('active')) {
+            select('body').classList.add('hero-dark');
+        } else {
+            select('body').classList.remove('hero-dark');
+        }
     }
     window.addEventListener('load', navbarlinksActive)
     onscroll(document, navbarlinksActive)
