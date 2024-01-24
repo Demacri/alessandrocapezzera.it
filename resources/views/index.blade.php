@@ -80,8 +80,8 @@
             <ul id="portfolio-flters">
               <li data-filter="*" class="filter-active">All</li>
               {{-- <li data-filter=".filter-app">App</li> --}}
-              <li data-filter=".filter-web">Web</li>
               <li data-filter=".filter-embedded-system">{{ __('Embedded Systems') }}</li>
+              <li data-filter=".filter-web">Web</li>
               <li data-filter=".filter-other">{{ __('Other') }}</li>
             </ul>
           </div>
