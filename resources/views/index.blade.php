@@ -28,10 +28,7 @@
   <section id="hero" class="d-flex flex-column justify-content-center">
     <div class="container">
       <h1 id="hero-h1">Alessandro Capezzera</h1>
-      <p><span id="hero-p" class="typed">Technical Lead {{ __('at') }} Zerouno SRL, Freelancer</span></p>
-      <div class="language-selector">
-
-      </div>
+      <p><span id="hero-p" class="typed">Technical Lead {{ __('at') }} Zerouno S.r.l., Freelancer</span></p>
       <div class="social-links">
         <a href="mailto:info@alessandrocapezzera.it" class="gmail" aria-label="{{ __('Gmail') }}"><i
             class="bx bxl-gmail"></i></a>
@@ -52,7 +49,7 @@
         ?>
         <div id="language-selector-container">
           <div class="language-selector-box">
-            <a href="/{{ $locale }}/" class="language-link"><i class="ico-flag-{{ $currentFlag }}"></i></a>
+            <i class="ico-flag-{{ $currentFlag }}"></i>
             <i class="bx bxs-down-arrow arrow-lang-selector">
             </i>
           </div>
@@ -246,7 +243,7 @@
             <div class="resume-item">
               <h4>Technical Lead</h4>
               <h5>02/2022 - {{ __('Resume.Today') }}</h5>
-              <p><em>Zerouno srl, Via Moncenisio 75 - 20089 Rozzano (MI), {{ __('Resume.Freelancer') }}</em></p>
+              <p><em>Zerouno S.r.l., Via Moncenisio 75 - 20089 Rozzano (MI), {{ __('Resume.Freelancer') }}</em></p>
               <p>{{ __('Resume.Zerouno') }}</p>
             </div>
             <div class="resume-item">
